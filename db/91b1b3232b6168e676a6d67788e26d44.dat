@@ -1,0 +1,682 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><script src="http://www.zxcs8.com/include/lib/js/jquery/jquery-1.7.1.js" type="text/javascript"></script><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>精校游戏 - 知轩藏书-精校小说-校对全本TXT小说下载网</title>
+<meta name="keywords" content="精校对小说,精校版小说下载,精校小说论坛,精校小说下载,精校小说网站,精校电子书,小说下载,全本小说下载,小说免费下载,全本电子书免费下载,TXT小说,CHM小说,全集小说下载" />
+<meta name="description" content="知轩藏书是一个给网友提供免费下载全集网络精校TXT小说、CHM电子书的网站。本站的宗旨是为网友搜集网络上质量最高的全集精校版小说、全集校对版小说！" />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.zxcs8.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.zxcs8.com/wlwmanifest.xml" />
+<link rel="alternate" type="application/rss+xml" title="RSS"  href="http://www.zxcs8.com/rss.php" />
+<link href="http://www.zxcs8.com/content/templates/ewceocms_t/main.css" rel="stylesheet" type="text/css" />
+<script src="http://www.zxcs8.com/include/lib/js/common_tpl.js" type="text/javascript"></script>
+<script>
+//MENU
+$(function(){
+ $("ul#topmenu>li:has(ul)").hover( 
+  function(){ 
+   $(this).find('ul').slideDown(100);
+  },
+  function(){
+   $(this).find('ul').slideUp(100);
+  }
+ );
+});
+//FIRST A
+$(document).ready(function(){
+$(".ibox1 .box a:first").addClass("b");
+});
+//INDEX PIC
+$(function(){
+ $(".mpic li").hover( 
+  function(){ 
+   $(this).addClass("hover");
+  },
+  function(){
+   $(this).removeClass("hover");
+  }
+ );
+});
+//SLIDER
+        var xf="";
+        var i=0;
+        var len="";
+        var dq ="";
+          $(document).ready(function(){        
+          len=$(".thnav li").length;
+        luenbo(i);
+        $(".thnav li").hover(function(){
+          clearTimeout(xf);
+          dq = $(this).index();
+          $(".ipic li").fadeOut().eq(dq).fadeIn();
+        $(".thnav li").removeClass("navli").eq(dq).addClass("navli");
+        },function(){
+        i= dq + 1 < len ? dq + 1 : 0;
+    xf = setTimeout("luenbo(" + i + ")", 5000);
+        });
+        }); 
+        
+        function luenbo(num){
+          i=num;
+          $(".ipic li").fadeOut().eq(i).fadeIn();
+        $(".thnav li").removeClass("navli").eq(i).addClass("navli"); 
+        i = i + 1 < len ? i + 1 : 0;
+        xf=setTimeout("luenbo(" + i + ")", 5000);
+        } 
+//TOTOP
+window.onscroll = function () {
+        if ($(document).scrollTop() > 100) {
+            $("#totop").fadeIn(200);
+        }
+        else {
+            $("#totop").fadeOut(200);
+        }
+    if ($(document).scrollTop() > 793) {
+        $("#lograd").addClass('logrt');
+        }
+        else {
+        $("#lograd").removeClass('logrt');
+	}
+}
+//收藏本站
+function addFavorite(url, title) {
+	try {
+		window.external.addFavorite(url, title);
+	} catch (e){
+		try {
+			window.sidebar.addPanel(title, url, '');
+        	} catch (e) {
+			showDialog("请按 Ctrl+D 键添加到收藏夹", 'notice');
+		}
+	}
+}
+//设为首页
+function setHomepage(sURL) {
+	if(BROWSER.ie){
+		document.body.style.behavior = 'url(#default#homepage)';
+		document.body.setHomePage(sURL);
+	} else {
+		showDialog("非 IE 浏览器请手动将本站设为首页", 'notice');
+		doane();
+	}
+}
+</script>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+</head>
+<body>
+<div class="bop">
+	<div id="topnav">		
+		<a href="http://www.zxcs8.com/admin">登录</a>&nbsp;/&nbsp;<a href="http://www.zxcs8.com/?plugin=yls_reg">注册</a>		<div class="left-top">
+			<span><a id="translateLink" href="javascript:translatePage();">繁體中文</a></span>
+			<span><a href="http://www.zxcs8.com/post/4267" target="_blank" >什么是精校小说？</a></span>
+
+		</div>
+	</div>
+</div>
+<div id="topbox">
+	<div id="head" class="wrap">
+    	<div id="ilogo">
+        			<a href="http://www.zxcs8.com/"><img src="http://www.zxcs8.com/content/templates/ewceocms_t/images/logo.png" alt="知轩藏书" /></a>
+		        </div>
+        <div id="headsh">
+<form name="keyform" method="get" action="http://www.zxcs8.com/index.php">
+<input name="keyword" type="text" value="搜索内容请勿使用空格..." onFocus="if(this.value=='搜索内容请勿使用空格...'){this.value=''};" onblur="if(this.value==''){this.value='搜索内容请勿使用空格...'};" value="搜索内容请勿使用空格..." class="hdin" x-webkit-speech x-webkit-grammar="builtin:translate" /><input type="submit" value="搜索" class="hdbtn" />
+</form>
+        </div>
+                <div id="toptext">
+        发送邮件向知轩推荐小说：admin@zxcs8.com        </div>
+		    </div>
+</div>
+<div id="topmenubox">
+	<div id="nav" class="wrap">	<ul id="topmenu">
+			<li class="common">
+                <a href="http://www.zxcs8.com/" ><span>首页</span></a>
+                        </li>
+			<li class="common">
+                <a href="http://www.zxcs8.com/sort/23" ><span>都市·娱乐</span></a>
+                        </li>
+			<li class="common">
+                <a href="http://www.zxcs8.com/sort/25" ><span>武侠·仙侠</span></a>
+                                <ul>
+                <li><a href="http://www.zxcs8.com/sort/36">精校武侠</a></li><li><a href="http://www.zxcs8.com/sort/37">精校仙侠</a></li>				</ul>
+                        </li>
+			<li class="common">
+                <a href="http://www.zxcs8.com/sort/26" ><span>奇幻·玄幻</span></a>
+                                <ul>
+                <li><a href="http://www.zxcs8.com/sort/38">精校奇幻</a></li><li><a href="http://www.zxcs8.com/sort/39">精校玄幻</a></li>				</ul>
+                        </li>
+			<li class="common">
+                <a href="http://www.zxcs8.com/sort/27" ><span>科幻·灵异</span></a>
+                                <ul>
+                <li><a href="http://www.zxcs8.com/sort/40">精校科幻</a></li><li><a href="http://www.zxcs8.com/sort/41">精校灵异</a></li>				</ul>
+                        </li>
+			<li class="common">
+                <a href="http://www.zxcs8.com/sort/28" ><span>历史·军事</span></a>
+                                <ul>
+                <li><a href="http://www.zxcs8.com/sort/42">精校历史</a></li><li><a href="http://www.zxcs8.com/sort/43">精校军事</a></li>				</ul>
+                        </li>
+			<li class="common">
+                <a href="http://www.zxcs8.com/sort/29" ><span>竞技·游戏</span></a>
+                                <ul>
+                <li><a href="http://www.zxcs8.com/sort/44">精校竞技</a></li><li><a href="http://www.zxcs8.com/sort/45">精校游戏</a></li>				</ul>
+                        </li>
+			<li class="common">
+                <a href="http://www.zxcs8.com/sort/34" ><span>实体·女生</span></a>
+                                <ul>
+                <li><a href="http://www.zxcs8.com/sort/46">精校实体</a></li><li><a href="http://www.zxcs8.com/sort/47">精校女生</a></li>				</ul>
+                        </li>
+			<li class="common">
+                <a href="http://www.zxcs8.com/sort/55" ><span>二次元</span></a>
+                        </li>
+		</ul>
+</div>
+</div>
+
+<script type="text/javascript" src="http://www.zxcs8.com/js/tw_cn.js"></script>
+<script type="text/javascript">
+var defaultEncoding = 2; //网站编写字体是否繁体，1-繁体，2-简体
+var translateDelay = 0; //延迟时间,若不在前, 要设定延迟翻译时间, 如100表示100ms,默认为0
+var cookieDomain = "http://www.zxcs8.com/"; //Cookie地址, 一定要设定, 通常为你的网址
+var msgToTraditionalChinese = "繁体中文"; //此处可以更改为你想要显示的文字
+var msgToSimplifiedChinese = "简体中文"; //同上，但两处均不建议更改
+var translateButtonId = "translateLink"; //默认互换id
+translateInitilization();
+</script><div class="wrap">
+	<div class="clear"><!--空白间隔--></div>
+	<div id="pleft">
+    	<div id="ptop"><a href="http://www.zxcs8.com/">首页</a>&nbsp;&gt;&nbsp;
+		<a href="http://www.zxcs8.com/sort/45">精校游戏</a>        </div>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-format="fluid"
+     data-ad-layout="image-middle"
+     data-ad-layout-key="-go+1r+6y-4y-b6"
+     data-ad-client="ca-pub-9084615261033862"
+     data-ad-slot="2965533131"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+    	<dl id="plist">
+			<dt><a href="http://www.zxcs8.com/post/11116">《英雄联盟：上帝之手》（校对版全本）作者：三千勿忘尽</a></dt>
+            <dd class="des">
+
+
+
+
+【TXT大小】：4.42 MB
+【内容简介】：　　作为国内最强战队的队长，电竞豪门的绝对王牌，他将自己最好的青春全部奉献给了战队，然而，当英雄迟暮，等待他的，却是被无情的扫地出门！
+　　这一世，当忠诚化为可笑的悲哀，梦想沦为现实的囚徒，白桦只想悠然的生活，顺便建立自己的直播帝国。
+　　但是，当责任再次降临，纵然他早已决定不再身披战袍...</dd>
+			<dd>
+分类：	<a href="http://www.zxcs8.com/sort/45">精校游戏</a>
+	&nbsp; <a href="http://www.zxcs8.com/tag/%E7%94%B5%E5%AD%90%E7%AB%9E%E6%8A%80">电子竞技</a> &nbsp;&nbsp;&nbsp;发布者：<a href="http://www.zxcs8.com/author/1719" >Suming</a>&nbsp;&nbsp;&nbsp;时间：2018-7-25 23:33<div align="right"><a href="http://www.zxcs8.com/post/11116" class="vw">查看全文</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div><br />
+
+			</dd>
+		</dl>
+    	<dl id="plist">
+			<dt><a href="http://www.zxcs8.com/post/11099">《完美机甲剑神》（校对版全本）作者：墨乡</a></dt>
+            <dd class="des">
+
+
+
+
+【TXT大小】：4.47 MB
+【内容简介】：　　进入大宇宙时期的人类，在星空遭遇黑暗魔族，双方血战星空。
+　　少年张远重生十年前，借游戏《英雄》加入星空战场，一代机甲剑神横空出世。
+正版订阅书源，收集于网络！
+文本由河洛校对！
+</dd>
+			<dd>
+分类：	<a href="http://www.zxcs8.com/sort/45">精校游戏</a>
+	&nbsp; <a href="http://www.zxcs8.com/tag/%E7%94%B5%E5%AD%90%E7%AB%9E%E6%8A%80">电子竞技</a> &nbsp;&nbsp;&nbsp;发布者：<a href="http://www.zxcs8.com/author/20456" >橙子君</a>&nbsp;&nbsp;&nbsp;时间：2018-7-11 2:23<div align="right"><a href="http://www.zxcs8.com/post/11099" class="vw">查看全文</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div><br />
+
+			</dd>
+		</dl>
+    	<dl id="plist">
+			<dt><a href="http://www.zxcs8.com/post/11098">《网游之进化战场》（校对版全本）作者：何家小兵兵</a></dt>
+            <dd class="des">
+
+
+
+
+【TXT大小】：5.88 MB
+【内容简介】：　　大天使挥舞手中审判之剑、骑士发起席卷大地的冲锋。
+　　巨龙惊雷怒吼在天空回荡、尸巫扔出覆盖战场的魔法。
+　　泰坦手中凝聚出泰坦之雷、蛇妖成群结队的进入战场。
+　　弓箭手射出箭雨遮盖天空、骷髅淹没绿色大地上生灵。
+正版订阅书源，收集于网络！
+文本由河洛校对！
+</dd>
+			<dd>
+分类：	<a href="http://www.zxcs8.com/sort/45">精校游戏</a>
+	&nbsp; <a href="http://www.zxcs8.com/tag/%E8%99%9A%E6%8B%9F%E7%BD%91%E6%B8%B8">虚拟网游</a> &nbsp;&nbsp;&nbsp;发布者：<a href="http://www.zxcs8.com/author/1696" >麻吉娃娃</a>&nbsp;&nbsp;&nbsp;时间：2018-7-10 9:41<div align="right"><a href="http://www.zxcs8.com/post/11098" class="vw">查看全文</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div><br />
+
+			</dd>
+		</dl>
+    	<dl id="plist">
+			<dt><a href="http://www.zxcs8.com/post/11037">《超级卡牌系统》（校对版全本）作者：黑乎乎的老妖</a></dt>
+            <dd class="des">
+
+
+
+
+【TXT大小】：5.22 MB
+【内容简介】：　　一不小心穿越到了海贼王的世界，肿么办？
+　　还好随身带着超级幻想卡牌系统，能抽取各种幻想人物。
+　　黑龙波对岩浆果实，八稚女对人妖拳法……
+正版订阅书源，收集于网络！
+文本由河洛校对！
+</dd>
+			<dd>
+分类：	<a href="http://www.zxcs8.com/sort/45">精校游戏</a>
+	&nbsp; <a href="http://www.zxcs8.com/tag/%E6%B8%B8%E6%88%8F%E5%BC%82%E7%95%8C">游戏异界</a> &nbsp;&nbsp;&nbsp;发布者：<a href="http://www.zxcs8.com/author/1667" >wx1102</a>&nbsp;&nbsp;&nbsp;时间：2018-5-12 0:01<div align="right"><a href="http://www.zxcs8.com/post/11037" class="vw">查看全文</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div><br />
+
+			</dd>
+		</dl>
+    	<dl id="plist">
+			<dt><a href="http://www.zxcs8.com/post/11027">《网游之倒行逆施》（校对版全本）作者：张扬的五月</a></dt>
+            <dd class="des">
+
+
+
+
+【TXT大小】：19.7 MB
+【内容简介】：　　因为不能购买游戏头盔，穷凶极恶的李怀林一发狠，自制了一个游戏仓进入了新网游《荣耀之心》，但是没有想到居然把自己的游戏人物卡成了BUG。
+　　别人打怪加经验，他打怪扣经验；别人做任务加经验拿钱，他做任务扣经验不说还扣钱。
+　　正在他一度以为这游戏玩不下去的时候，他的人物挂了一次，经验突...</dd>
+			<dd>
+分类：	<a href="http://www.zxcs8.com/sort/45">精校游戏</a>
+	&nbsp; <a href="http://www.zxcs8.com/tag/%E8%99%9A%E6%8B%9F%E7%BD%91%E6%B8%B8">虚拟网游</a> &nbsp;&nbsp;&nbsp;发布者：<a href="http://www.zxcs8.com/author/1719" >Suming</a>&nbsp;&nbsp;&nbsp;时间：2018-5-4 1:02<div align="right"><a href="http://www.zxcs8.com/post/11027" class="vw">查看全文</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div><br />
+
+			</dd>
+		</dl>
+    	<dl id="plist">
+			<dt><a href="http://www.zxcs8.com/post/11023">《游戏开发指南》（校对版全本）作者：我爱厨房</a></dt>
+            <dd class="des">
+
+
+
+
+【TXT大小】：3.09 MB
+【内容简介】：　　一部游戏开发的科普读物；
+　　一篇互联网产业崛起史；
+　　一个传奇制作人；
+　　一段游戏人生。
+　　这本书想写一个游戏圈。
+正版订阅书源，收集于网络！
+文本由河洛校对！
+</dd>
+			<dd>
+分类：	<a href="http://www.zxcs8.com/sort/45">精校游戏</a>
+	&nbsp; <a href="http://www.zxcs8.com/tag/%E8%99%9A%E6%8B%9F%E7%BD%91%E6%B8%B8">虚拟网游</a> &nbsp;&nbsp;&nbsp;发布者：<a href="http://www.zxcs8.com/author/1721" >枸杞</a>&nbsp;&nbsp;&nbsp;时间：2018-4-29 20:48<div align="right"><a href="http://www.zxcs8.com/post/11023" class="vw">查看全文</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div><br />
+
+			</dd>
+		</dl>
+    	<dl id="plist">
+			<dt><a href="http://www.zxcs8.com/post/11018">《绝顶枪王》（校对版全本）作者：果味喵</a></dt>
+            <dd class="des">
+
+
+
+
+【TXT大小】：5.77 MB
+【内容简介】：　　一块键盘，一只鼠标，要么杀戮，要么死亡！
+　　从深山里走出来的猎人少年，一头扎进了陌生的城市、陌生的学校和陌生的电竞职业圈——带着他飞扬的双手，和他的枪！
+　　呐，所以，你以为我们要讲的是一个失足少年撞大运捡秘籍得金手指然后人挡杀人佛挡灭佛的故事？
+　　不不不，并没有那么复杂。这是...</dd>
+			<dd>
+分类：	<a href="http://www.zxcs8.com/sort/45">精校游戏</a>
+	&nbsp; <a href="http://www.zxcs8.com/tag/%E7%94%B5%E5%AD%90%E7%AB%9E%E6%8A%80">电子竞技</a> &nbsp;&nbsp;&nbsp;发布者：<a href="http://www.zxcs8.com/author/2955" >花小雪</a>&nbsp;&nbsp;&nbsp;时间：2018-4-25 22:07<div align="right"><a href="http://www.zxcs8.com/post/11018" class="vw">查看全文</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div><br />
+
+			</dd>
+		</dl>
+    	<dl id="plist">
+			<dt><a href="http://www.zxcs8.com/post/10990">《在修仙界玩网游》（校对版全本）作者：寻雾者</a></dt>
+            <dd class="des">
+
+
+
+
+【TXT大小】：4.04 MB
+【内容简介】：　　“说起来你可能不信，我现在是在修仙界登录的游戏。”
+　　在修仙界玩西幻网游是个什么体验？
+　　穿越成废物体质的白夏没有老爷爷，也没人来退婚，完全没有任何金手指。眼看就要当杂役直到老死，忽然有一天，他发现原来修仙界居然也有网游。
+　　当游戏对现实产生影响时，他知道，自己逆天改命的机会...</dd>
+			<dd>
+分类：	<a href="http://www.zxcs8.com/sort/45">精校游戏</a>
+	&nbsp; <a href="http://www.zxcs8.com/tag/%E8%99%9A%E6%8B%9F%E7%BD%91%E6%B8%B8">虚拟网游</a> &nbsp;&nbsp;&nbsp;发布者：<a href="http://www.zxcs8.com/author/15145" >皓月星辰</a>&nbsp;&nbsp;&nbsp;时间：2018-3-31 0:09<div align="right"><a href="http://www.zxcs8.com/post/10990" class="vw">查看全文</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div><br />
+
+			</dd>
+		</dl>
+    	<dl id="plist">
+			<dt><a href="http://www.zxcs8.com/post/10980">《穿越从山贼开始》（校对版全本）作者：怒笑</a></dt>
+            <dd class="des">
+
+
+
+
+【TXT大小】：6.80 MB
+【内容简介】：　　当陆海空知道自己穿越到了一个游戏世界的时候他是懵掰的。
+　　当然自己所在的这一个国家居然是东汉，而且还是末年的时候，他觉得自己是可以牛掰的。
+　　但当他知道官兵马上就要剿了他们这一个山寨的时候，这家伙就煞笔了。
+正版订阅书源，收集于网络！
+文本由田胥校对！
+</dd>
+			<dd>
+分类：	<a href="http://www.zxcs8.com/sort/45">精校游戏</a>
+	&nbsp; <a href="http://www.zxcs8.com/tag/%E6%B8%B8%E6%88%8F%E5%BC%82%E7%95%8C">游戏异界</a> &nbsp;&nbsp;&nbsp;发布者：<a href="http://www.zxcs8.com/author/1705" >luoye</a>&nbsp;&nbsp;&nbsp;时间：2018-3-21 23:29<div align="right"><a href="http://www.zxcs8.com/post/10980" class="vw">查看全文</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div><br />
+
+			</dd>
+		</dl>
+    	<dl id="plist">
+			<dt><a href="http://www.zxcs8.com/post/10964">《网游之全球在线》（校对版全本）作者：笙箫剑客</a></dt>
+            <dd class="des">
+
+
+
+
+【TXT大小】：8.04 MB
+【内容简介】：　　史上第一款集个人冒险+领地建设+位面战争于一体的跨时代网游《地球Online》，全球玩家在线，群雄争霸。且看重生后的主角如何建设领地，招募历史猛将名士，搅动风云，成就帝王霸业！
+　　（PS：回归最原汁原味的建设类争霸网游，期待您的加盟！）
+正版订阅书源，收集于网络！
+文本由河洛校对...</dd>
+			<dd>
+分类：	<a href="http://www.zxcs8.com/sort/45">精校游戏</a>
+	&nbsp; <a href="http://www.zxcs8.com/tag/%E8%99%9A%E6%8B%9F%E7%BD%91%E6%B8%B8">虚拟网游</a> &nbsp;&nbsp;&nbsp;发布者：<a href="http://www.zxcs8.com/author/2955" >花小雪</a>&nbsp;&nbsp;&nbsp;时间：2018-3-8 23:13<div align="right"><a href="http://www.zxcs8.com/post/10964" class="vw">查看全文</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div><br />
+
+			</dd>
+		</dl>
+    	<dl id="plist">
+			<dt><a href="http://www.zxcs8.com/post/10961">《终末之城》（校对版全本）作者：西贝猫</a></dt>
+            <dd class="des">
+
+
+
+
+【TXT大小】：3.01 MB
+【内容简介】：　　末日降临了。
+　　没有任何预兆的灾难骤然爆发，席卷了整个世界。
+　　无数人在灾难之中死去，而当那些幸存者再次睁开眼睛时才发现，这个世界，已经被彻底改变。
+　　神秘的力量，可怕的怪物，对于人类来说，摆在他们面前的道路只有生存，或者死亡。为此，他们抛弃了一切，只期望能够在这残酷的世界之...</dd>
+			<dd>
+分类：	<a href="http://www.zxcs8.com/sort/45">精校游戏</a>
+	&nbsp; <a href="http://www.zxcs8.com/tag/%E6%B8%B8%E6%88%8F%E5%BC%82%E7%95%8C">游戏异界</a> &nbsp;&nbsp;&nbsp;发布者：<a href="http://www.zxcs8.com/author/1684" >不死先生</a>&nbsp;&nbsp;&nbsp;时间：2018-3-5 23:22<div align="right"><a href="http://www.zxcs8.com/post/10961" class="vw">查看全文</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div><br />
+
+			</dd>
+		</dl>
+    	<dl id="plist">
+			<dt><a href="http://www.zxcs8.com/post/10954">《英雄联盟之巅峰王座(英雄联盟之韩娱巨星)》（校对版全本）作者：Iced子夜</a></dt>
+            <dd class="des">
+
+
+
+
+【TXT大小】：6.79 MB
+【内容简介】：　　这是一个名叫李相赫的华夏巅峰职业选手，阴差阳错之下穿越到平行世界的韩国，然后重返LPL的故事！
+　　他惊讶的发现，这个世界的韩国，电竞早已和娱乐相结合，电竞圈即是娱乐圈，电竞明星即是娱乐明星。每个顶尖职业选手都可以像那些巨星一样接到各种天价代言、出MAD专辑。
+　　在这故事里，三星双...</dd>
+			<dd>
+分类：	<a href="http://www.zxcs8.com/sort/45">精校游戏</a>
+	&nbsp; <a href="http://www.zxcs8.com/tag/%E7%94%B5%E5%AD%90%E7%AB%9E%E6%8A%80">电子竞技</a> &nbsp;&nbsp;&nbsp;发布者：<a href="http://www.zxcs8.com/author/1706" >┊小小邪┊</a>&nbsp;&nbsp;&nbsp;时间：2018-2-27 0:17<div align="right"><a href="http://www.zxcs8.com/post/10954" class="vw">查看全文</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div><br />
+
+			</dd>
+		</dl>
+    	<dl id="plist">
+			<dt><a href="http://www.zxcs8.com/post/10953">《剑娘》（校对版全本）作者：沧澜波涛短</a></dt>
+            <dd class="des">
+
+
+
+
+【TXT大小】：10.2 MB
+【内容简介】：　　元壁崩坏，无数存在于书籍，故事，传说，动漫中的强者，毁灭了大半人类的文明。
+　　名剑觉醒，变化肉身！
+　　一千年前，人类依靠剑娘苟延残喘。一千年后，人类依靠剑娘，重新站在了命运的转折线上。
+　　清贫剑：“主人的肚子好温暖”
+　　倚天剑：“让我们对酒高歌，活得潇潇洒洒”
+　　越王...</dd>
+			<dd>
+分类：	<a href="http://www.zxcs8.com/sort/45">精校游戏</a>
+	&nbsp; <a href="http://www.zxcs8.com/tag/%E8%99%9A%E6%8B%9F%E7%BD%91%E6%B8%B8">虚拟网游</a> &nbsp;&nbsp;&nbsp;发布者：<a href="http://www.zxcs8.com/author/4675" >独一无er</a>&nbsp;&nbsp;&nbsp;时间：2018-2-25 23:28<div align="right"><a href="http://www.zxcs8.com/post/10953" class="vw">查看全文</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div><br />
+
+			</dd>
+		</dl>
+    	<dl id="plist">
+			<dt><a href="http://www.zxcs8.com/post/10885">《网游之荒古时代》（校对版全本）作者：木有才O</a></dt>
+            <dd class="des">
+
+
+
+
+【TXT大小】：6.12 MB
+【内容简介】：　　在这里，你可以见到种种神秘的部族；
+　　在这里，你可以挑战无数的荒古巨兽；
+　　在这里，你可以去到深山大泽中探寻天材地宝；
+　　在这里，只要你的实力足够强大，你甚至可以去挑战仙、挑战神、挑战祖灵，挑战你头顶的那一片天！
+　　这里，有着一切的可能！
+正版订阅书源，收集于网络！
+...</dd>
+			<dd>
+分类：	<a href="http://www.zxcs8.com/sort/45">精校游戏</a>
+	&nbsp; <a href="http://www.zxcs8.com/tag/%E8%99%9A%E6%8B%9F%E7%BD%91%E6%B8%B8">虚拟网游</a> &nbsp;&nbsp;&nbsp;发布者：<a href="http://www.zxcs8.com/author/1720" >淡看风尘</a>&nbsp;&nbsp;&nbsp;时间：2017-12-17 3:23<div align="right"><a href="http://www.zxcs8.com/post/10885" class="vw">查看全文</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div><br />
+
+			</dd>
+		</dl>
+    	<dl id="plist">
+			<dt><a href="http://www.zxcs8.com/post/10884">《异界那些事儿》（校对版全本）作者：寂寞的化石</a></dt>
+            <dd class="des">
+
+	
+
+
+	【TXT大小】：9.36 MB
+【内容简介】：
+　　“科学是第一生产力，魔法是第一推动力，当科学与魔法交织之时……‘嘭’的一声我就过来拯救世界了。”
+　　“钢铁侠？错！那是魔能动力装甲！”
+　　“狙击枪？错！那是魔能电磁炮！”
+　　“互联网？错！那是人工智能魔网！”
+　　“RPG？……呃，那真的只是RPG。”
+　　“妹子...</dd>
+			<dd>
+分类：	<a href="http://www.zxcs8.com/sort/45">精校游戏</a>
+	&nbsp; <a href="http://www.zxcs8.com/tag/%E6%B8%B8%E6%88%8F%E5%BC%82%E7%95%8C">游戏异界</a> &nbsp;&nbsp;&nbsp;发布者：<a href="http://www.zxcs8.com/author/2955" >花小雪</a>&nbsp;&nbsp;&nbsp;时间：2017-12-16 1:16<div align="right"><a href="http://www.zxcs8.com/post/10884" class="vw">查看全文</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div><br />
+
+			</dd>
+		</dl>
+		<div id="pagenavi"> <span>1</span>  <a href="http://www.zxcs8.com/sort/45/page/2">2</a>  <a href="http://www.zxcs8.com/sort/45/page/3">3</a>  <a href="http://www.zxcs8.com/sort/45/page/4">4</a>  <a href="http://www.zxcs8.com/sort/45/page/5">5</a>  <a href="http://www.zxcs8.com/sort/45/page/6">6</a> <em>...</em> <a href="http://www.zxcs8.com/sort/45/page/19" title="尾页">&raquo;</a></div>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 移动 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9084615261033862"
+     data-ad-slot="1254762237"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+        <div class="clear"><!--空白间隔--></div>
+	</div>
+    <div id="pright">
+    	<div class="mlist ibox2">
+    		<div class="title"><strong>最新小说</strong></div>
+        	<div class="box">
+					<ul id="newlog">
+		<li><a href="http://www.zxcs8.com/post/11117">《最终猎杀》（校对版全本）作者：大飞艇</a></li>
+		<li><a href="http://www.zxcs8.com/post/11116">《英雄联盟：上帝之手》（校对版全本）作者：三千勿忘尽</a></li>
+		<li><a href="http://www.zxcs8.com/post/11115">《我是大科学家》（校对版全本）作者：蜜汁扣肉</a></li>
+		<li><a href="http://www.zxcs8.com/post/11114">《我家客人你惹不起》（校对版全本）作者：烽火成林</a></li>
+		<li><a href="http://www.zxcs8.com/post/11113">《农家仙田》（校对版全本）作者：南山隐士</a></li>
+		<li><a href="http://www.zxcs8.com/post/11112">《两界搬运工》（校对版全本）作者：石闻</a></li>
+		<li><a href="http://www.zxcs8.com/post/11111">《修真四万年》（校对版全本）作者：卧牛真人</a></li>
+		<li><a href="http://www.zxcs8.com/post/11110">《最强基因》（校对版全本）作者：零下九十度</a></li>
+		</ul>
+        	</div>
+    	</div>
+	<div class="clear"><!--空白间隔--></div>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 精校小说3 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:260px;height:260px"
+     data-ad-client="ca-pub-9084615261033862"
+     data-ad-slot="9291548638"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+        		<div class="mlist ibox2 tophot">
+    		<div class="title"><strong>总点击榜</strong></div>
+        	<div class="box">
+					<ul id="hotlog">
+		<li><a href="http://www.zxcs8.com/post/3847">《诛仙》（精校版全本）作者：萧鼎</a></li>
+		<li><a href="http://www.zxcs8.com/post/9721">《高术通神》（校对版全本）作者：伸笔码良</a></li>
+		<li><a href="http://www.zxcs8.com/post/4475">《龙族》（实体版1-3部全本）作者：江南</a></li>
+		<li><a href="http://www.zxcs8.com/post/2517">《凡人修仙传》（校对版全本+番外）作者：忘语</a></li>
+		<li><a href="http://www.zxcs8.com/post/1443">《官道之色戒》（校对版全本）作者：低手寂寞</a></li>
+		<li><a href="http://www.zxcs8.com/post/9384">《魔天记》（校对版全本）作者：忘语</a></li>
+		<li><a href="http://www.zxcs8.com/post/7206">《百炼成仙》（校对版全本）作者：幻雨</a></li>
+		<li><a href="http://www.zxcs8.com/post/10240">《雪中悍刀行》（校对版全本）作者：烽火戏诸侯</a></li>
+		</ul>
+        	</div>
+    	</div>
+            <div class="clear"><!--空白间隔--></div>
+		<div class="mlist ibox2 tophot">
+    		<div class="title"><strong>月点击榜</strong></div>
+        	<div class="box">
+				<ul><li><a href="http://www.zxcs8.com/post/11095" title="《无限制神话》（校对版全本）作者：废纸桥">《无限制神话》（校对版全本）作者：废纸桥</a></li></ul>
+    <ul><li><a href="http://www.zxcs8.com/post/11085" title="《万界天尊》（校对版全本）作者：血红">《万界天尊》（校对版全本）作者：血红</a></li></ul>
+    <ul><li><a href="http://www.zxcs8.com/post/11089" title="《唐朝小闲人》（校对版全本）作者：南希北庆">《唐朝小闲人》（校对版全本）作者：南希北庆</a></li></ul>
+    <ul><li><a href="http://www.zxcs8.com/post/11092" title="《七界武神》（校对版全本）作者：叶之凡">《七界武神》（校对版全本）作者：叶之凡</a></li></ul>
+    <ul><li><a href="http://www.zxcs8.com/post/11104" title="《都市之国术无双》（校对版全本）作者：鱼儿小小">《都市之国术无双》（校对版全本）作者：鱼儿小小</a></li></ul>
+    <ul><li><a href="http://www.zxcs8.com/post/11088" title="《炽焰之魂》（校对版全本）作者：卡列颠">《炽焰之魂》（校对版全本）作者：卡列颠</a></li></ul>
+    <ul><li><a href="http://www.zxcs8.com/post/11106" title="《神门》（校对版全本）作者：薪意">《神门》（校对版全本）作者：薪意</a></li></ul>
+    <ul><li><a href="http://www.zxcs8.com/post/11086" title="《贞观大闲人》（校对版全本）作者：贼眉鼠眼">《贞观大闲人》（校对版全本）作者：贼眉鼠眼</a></li></ul>
+            	</div>
+    	</div>
+        <div class="clear"><!--空白间隔--></div>
+    	<div class="mlist ibox2">
+    		<div class="title"><strong>随机推荐</strong></div>
+        	<div class="box">
+					<ul id="randlog">
+		<li><a href="http://www.zxcs8.com/post/2443">《随身带个英雄联盟客户端》（校对版全本）作者：懒到不想呼吸</a></li>
+		<li><a href="http://www.zxcs8.com/post/2796">《战无不胜》（校对版全本）作者：荆洚晓</a></li>
+		<li><a href="http://www.zxcs8.com/post/2449">《窃听人生》（校对版全本）作者：彬临城下</a></li>
+		<li><a href="http://www.zxcs8.com/post/2450">《武逆苍穹》（校对版全本）作者：萧漠</a></li>
+		<li><a href="http://www.zxcs8.com/post/2451">《大道修仙》（校对版全本）作者：若封</a></li>
+		<li><a href="http://www.zxcs8.com/post/2452">《异界玩家》（校对版全本）作者：新鲜的白豆腐</a></li>
+		<li><a href="http://www.zxcs8.com/post/2453">《终极牧师》（校对版全本）作者：夏小白</a></li>
+		<li><a href="http://www.zxcs8.com/post/2486">《核蚕》（校对版全本）作者：安舞落</a></li>
+		</ul>
+        	</div>
+    	</div>
+        <div class="clear"><!--空白间隔--></div>
+            <div class="mlist ibox2">
+    	<div class="title"><strong>小说类别</strong></div>
+        <div class="box itag">
+			<a style="color:#2a412d" href="http://www.zxcs8.com/tag/%E5%BC%82%E6%9C%AF%E8%B6%85%E8%83%BD" title="相关内容405 篇">异术超能</a>
+<a style="color:#5ee786" href="http://www.zxcs8.com/tag/%E7%AF%AE%E7%90%83%E8%BF%90%E5%8A%A8" title="相关内容15 篇">篮球运动</a>
+<a style="color:#483ad2" href="http://www.zxcs8.com/tag/%E8%BF%9B%E5%8C%96%E5%8F%98%E5%BC%82" title="相关内容36 篇">进化变异</a>
+<a style="color:#28709a" href="http://www.zxcs8.com/tag/%E9%A2%86%E4%B8%BB%E8%B4%B5%E6%97%8F" title="相关内容8 篇">领主贵族</a>
+<a style="color:#89d26f" href="http://www.zxcs8.com/tag/%E7%8E%84%E5%B9%BB%E5%A5%B3%E7%94%9F" title="相关内容20 篇">玄幻女生</a>
+<a style="color:#9433c8" href="http://www.zxcs8.com/tag/%E7%A5%9E%E8%AF%9D%E4%BF%AE%E7%9C%9F" title="相关内容31 篇">神话修真</a>
+<a style="color:#a41ead" href="http://www.zxcs8.com/tag/%E5%8E%86%E5%8F%B2%E4%BC%A0%E8%AE%B0" title="相关内容2 篇">历史传记</a>
+<a style="color:#d39620" href="http://www.zxcs8.com/tag/%E5%8F%98%E8%BA%AB%E5%85%A5%E6%9B%BF" title="相关内容1 篇">变身入替</a>
+<a style="color:#fff0d0" href="http://www.zxcs8.com/tag/%E6%A3%8B%E7%89%8C%E5%AF%B9%E5%BC%88" title="相关内容3 篇">棋牌对弈</a>
+<a style="color:#3224ef" href="http://www.zxcs8.com/tag/%E7%8E%B0%E4%BB%A3%E4%BF%AE%E7%9C%9F" title="相关内容85 篇">现代修真</a>
+<a style="color:#b52457" href="http://www.zxcs8.com/tag/%E5%86%9B%E4%BA%8B%E6%88%98%E4%BA%89" title="相关内容25 篇">军事战争</a>
+<a style="color:#8d7f6d" href="http://www.zxcs8.com/tag/%E9%83%BD%E5%B8%82%E7%94%9F%E6%B4%BB" title="相关内容729 篇">都市生活</a>
+<a style="color:#a7521d" href="http://www.zxcs8.com/tag/%E6%98%9F%E9%99%85%E6%88%98%E4%BA%89" title="相关内容30 篇">星际战争</a>
+<a style="color:#dcebc6" href="http://www.zxcs8.com/tag/%E5%8F%A4%E5%85%B8%E4%BB%99%E4%BE%A0" title="相关内容188 篇">古典仙侠</a>
+<a style="color:#2db45b" href="http://www.zxcs8.com/tag/%E5%A8%B1%E4%B9%90%E6%98%8E%E6%98%9F" title="相关内容79 篇">娱乐明星</a>
+<a style="color:#3b6ad9" href="http://www.zxcs8.com/tag/%E5%8F%A4%E6%AD%A6%E6%9C%BA%E7%94%B2" title="相关内容23 篇">古武机甲</a>
+<a style="color:#21b5f0" href="http://www.zxcs8.com/tag/%E6%97%B6%E7%A9%BA%E7%A9%BF%E6%A2%AD" title="相关内容148 篇">时空穿梭</a>
+<a style="color:#267cc6" href="http://www.zxcs8.com/tag/%E6%B8%B8%E6%88%8F%E5%BC%82%E7%95%8C" title="相关内容81 篇">游戏异界</a>
+<a style="color:#23f161" href="http://www.zxcs8.com/tag/%E5%8F%A6%E7%B1%BB%E5%B9%BB%E6%83%B3" title="相关内容4 篇">另类幻想</a>
+<a style="color:#2a3ad4" href="http://www.zxcs8.com/tag/%E4%B8%9C%E6%96%B9%E7%8E%84%E5%B9%BB" title="相关内容581 篇">东方玄幻</a>
+<a style="color:#bc3dc9" href="http://www.zxcs8.com/tag/%E5%BC%82%E7%95%8C%E5%A4%A7%E9%99%86" title="相关内容396 篇">异界大陆</a>
+<a style="color:#301d84" href="http://www.zxcs8.com/tag/%E5%9B%BD%E6%9C%AF%E6%AD%A6%E6%8A%80" title="相关内容11 篇">国术武技</a>
+<a style="color:#91cfb8" href="http://www.zxcs8.com/tag/%E7%81%B5%E5%BC%82%E5%A5%87%E8%B0%88" title="相关内容230 篇">灵异奇谈</a>
+<a style="color:#e4b70" href="http://www.zxcs8.com/tag/%E4%BC%A0%E7%BB%9F%E6%AD%A6%E4%BE%A0" title="相关内容123 篇">传统武侠</a>
+<a style="color:#1b4e22" href="http://www.zxcs8.com/tag/%E8%99%9A%E6%8B%9F%E7%BD%91%E6%B8%B8" title="相关内容147 篇">虚拟网游</a>
+<a style="color:#38b559" href="http://www.zxcs8.com/tag/%E4%B8%A4%E5%AE%8B%E5%85%83%E6%98%8E" title="相关内容190 篇">两宋元明</a>
+<a style="color:#5c6e17" href="http://www.zxcs8.com/tag/%E4%BD%93%E8%82%B2%E7%AB%9E%E6%8A%80" title="相关内容5 篇">体育竞技</a>
+<a style="color:#54ee98" href="http://www.zxcs8.com/tag/%E6%B8%85%E5%8F%B2%E6%B0%91%E5%9B%BD" title="相关内容69 篇">清史民国</a>
+<a style="color:#98894" href="http://www.zxcs8.com/tag/%E5%8E%86%E5%8F%B2%E5%A5%B3%E7%94%9F" title="相关内容4 篇">历史女生</a>
+<a style="color:#c94e9" href="http://www.zxcs8.com/tag/%E6%9C%AA%E6%9D%A5%E4%B8%96%E7%95%8C" title="相关内容54 篇">未来世界</a>
+<a style="color:#126ea7" href="http://www.zxcs8.com/tag/%E4%BB%99%E4%BE%A0%E5%A5%B3%E7%94%9F" title="相关内容19 篇">仙侠女生</a>
+<a style="color:#33c9c1" href="http://www.zxcs8.com/tag/%E7%A7%91%E5%B9%BB%E5%A5%B3%E7%94%9F" title="相关内容28 篇">科幻女生</a>
+<a style="color:#6b7c6f" href="http://www.zxcs8.com/tag/%E8%B0%8D%E6%88%98%E7%89%B9%E5%B7%A5" title="相关内容1 篇">谍战特工</a>
+<a style="color:#5aa97a" href="http://www.zxcs8.com/tag/%E6%8A%97%E6%88%98%E7%83%BD%E7%81%AB" title="相关内容21 篇">抗战烽火</a>
+<a style="color:#5c3a5c" href="http://www.zxcs8.com/tag/%E5%90%8C%E4%BA%BA%E5%B0%8F%E8%AF%B4" title="相关内容34 篇">同人小说</a>
+<a style="color:#f54edf" href="http://www.zxcs8.com/tag/%E7%8E%B0%E4%BB%A3%E9%AD%94%E6%B3%95" title="相关内容9 篇">现代魔法</a>
+<a style="color:#eedd42" href="http://www.zxcs8.com/tag/%E8%B6%B3%E7%90%83%E8%BF%90%E5%8A%A8" title="相关内容44 篇">足球运动</a>
+<a style="color:#5909" href="http://www.zxcs8.com/tag/%E7%94%B5%E5%AD%90%E7%AB%9E%E6%8A%80" title="相关内容23 篇">电子竞技</a>
+<a style="color:#c8e500" href="http://www.zxcs8.com/tag/%E7%A7%A6%E6%B1%89%E4%B8%89%E5%9B%BD" title="相关内容121 篇">秦汉三国</a>
+<a style="color:#eece13" href="http://www.zxcs8.com/tag/%E6%88%98%E4%BA%89%E5%B9%BB%E6%83%B3" title="相关内容18 篇">战争幻想</a>
+        </div>
+    </div>
+    </div>
+    </div>
+</div>
+<div class="clear"><!--空白间隔--></div>
+<div id="footerbar">
+<a href="http://www.zxcs8.com/map.html">网站地图</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="http://www.zxcs8.com/">知轩藏书</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="http://www.zxcs8.com/rss.php">RSS</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="mailto:admin@zxcs8.com">联系站长</a><p>
+All Rights Reserved. Powered by <a href="http://www.emlog.net" title="emlog 5.3.1">emlog</a> Themes by <a href="http://www.zxcs8.com/" id="ewcms" target="_blank">知轩藏书</a>
+<br /><a href="http://www.miibeian.gov.cn" target="_blank"></a> <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?6a69069ac581d0fb868cf8b1e55621b3";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+
+
+
+
+<script>
+(function(){
+    var bp = document.createElement('script');
+    bp.src = '//push.zhanzhang.baidu.com/push.js';
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+            
+
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-108924713-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-108924713-1');
+</script>
+ <style>.yinyong {text-align:left !important;text-indent:2em !important;margin:10px 0 1em 0 !important;padding: 5px 10px!important;border: 1px dashed #CCC!important;background: #f7f7f7 url(http://www.zxcs8.com/content/plugins/Lanye_downstyle/yinyongbg.png) right top no-repeat !important;color: #000 !important;font-size: 13px !important;line-height:22px !important;}
+.fujian {text-align:left !important;text-indent:0 !important;padding:0 0 0 32px !important;width: auto !important;background-image: url(http://www.zxcs8.com/content/plugins/Lanye_downstyle/down_01.png) !important;background-position: left top !important;
+background-repeat: no-repeat !important;color: white !important;font-weight: bold !important;font-size: 15px !important;height: 32px !important;line-height: 32px !important;background-color: #F90 !important;margin: 10px 0 !important;box-shadow: 1px 2px 1px #999 !important;}
+.fujian a{color:#fff !important; font-family:"Microsoft Yahei" !important;}
+.fujian:hover{background-color:#00aff0 !important}
+.gray{margin:20px 0px !important;padding:15px 15px 15px 70px !important;font-size:12px !important;background:url(http://www.zxcs8.com/content/plugins/Lanye_downstyle/checklist.png) no-repeat 20px 20px #f6f5f5;border:1px solid #cccccc !important;color:#555 !important;border-radius:8px} 
+.yellow {margin:20px 0px !important;padding:15px 15px 15px 70px !important;font-size:12px !important;background:url(http://www.zxcs8.com/content/plugins/Lanye_downstyle/warning.png) no-repeat 20px 20px #fff9c6;border:1px solid #fbe951 !important;color:#cba200 !important;border-radius:8px} 
+.green {margin:20px 0px !important;padding:15px 15px 15px 70px !important;font-size:12px !important;background:url(http://www.zxcs8.com/content/plugins/Lanye_downstyle/yes.png) no-repeat 20px 20px #EBF6E0;border:1px solid #b7ec82 !important;color:#649505 !important;border-radius:8px} 
+.blue {margin:20px 0px !important;padding:15px 15px 15px 70px !important;font-size:12px !important;background:url(http://www.zxcs8.com/content/plugins/Lanye_downstyle/info.png) no-repeat 20px 20px #c3e5ff;border:1px solid #8accff !important;color:#0d70bb !important;border-radius:8px} 
+.red {margin:20px 0px !important;padding:15px 15px 15px 70px !important;font-size:12px !important;background:url(http://www.zxcs8.com/content/plugins/Lanye_downstyle/noway.png) no-repeat 20px 20px #FFE9E9;border:1px solid #ffacac !important;color:#bd0000 !important;border-radius:8px} 
+</style>
+</p>
+</div>
+<div id="totop"><a href="javascript:scroll(0,0)"></a></div>
+<!-- zxcs8.com Baidu tongji analytics -->
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F6a69069ac581d0fb868cf8b1e55621b3' type='text/javascript'%3E%3C/script%3E"));
+</script>
+</body>
+</html>

@@ -11,6 +11,11 @@ from lxml import etree
 import base64
 import hashlib
 import os
+import json
+
+db_path = './db'
+if not os.path.exists(db_path):
+    os.makedirs(db_path)
 
 
 def md5(s):
@@ -19,18 +24,18 @@ def md5(s):
     return hl.hexdigest()
 
 
+f = open('zxcs_downloads.txt', mode='w', encoding="utf-8")
 cl_content_url = re.compile(r'(?<=http://www\.zxcs8\.com/post/)\d+')
-cl_list_url = re.compile(r'http://www.zxcs8.com/sort/\d+')
+cl_list_url = re.compile(r'http://www\.zxcs8\.com/(sort|record|tag)/\S+')
+cl_title = re.compile(r' - 知轩藏书')
 domain = 'zxcs8.com'
 cache = {
     'http://www.zxcs8.com/post/4267': True
 }
 
-f = open('db/zxcs_downloads.dat', mode='w', encoding="utf-8")
-
 
 def write_down(s):
-    print(s)
+    # print(s)
     f.write('%s\n' % s)
     f.flush()
 
@@ -41,7 +46,7 @@ def get_content(url, cache=True):
         with open(f_name, mode='r', encoding='utf-8') as fs:
             return ''.join(fs.readlines())
     else:
-        req = requests.get(url)
+        req = requests.get(url, timeout=10)
         encodings = requests.utils.get_encodings_from_content(req.text)
         if encodings:
             encoding = encodings[0]
@@ -58,12 +63,11 @@ def get_content(url, cache=True):
 def deal_url(target_url):
     html = get_content(target_url)
     sel = etree.HTML(html)
-    a_tags = sel.xpath('//a')
-    if not len(a_tags):
+    urls = sel.xpath('//a/@href')
+    if not len(urls):
         return
-    for a in a_tags:
+    for url in urls:
         try:
-            url = a.xpath('@href')[0]
             if url in cache:
                 continue
             else:
@@ -73,6 +77,7 @@ def deal_url(target_url):
                 '''
                     列表页
                 '''
+                print(url)
                 deal_url(url)
                 time.sleep(1)
                 continue
@@ -81,8 +86,8 @@ def deal_url(target_url):
                 '''
                     详情页
                 '''
-                novel_name = a.xpath('text()')[0]
-                download_txt('%s,http://www.zxcs8.com/download.php?id=%s' % (novel_name, match.group(0)))
+                # novel_name = a.xpath('text()')[0]
+                download_txt('http://www.zxcs8.com/download.php?id=%s' % (match.group(0)))
                 continue
         except:
             traceback.print_exc()
@@ -92,6 +97,23 @@ def download_txt(url):
     write_down(url)
 
 
+def download_txt_real(url, info):
+    html = get_content(url)
+    sel = etree.HTML(html)
+    urls = sel.xpath("//span[@class='downfile']/a/@href")
+    title = sel.xpath("//title/text()")[0]
+    title = cl_title.sub('', title)
+    print(title, urls)
+    info[title] = urls
+
+
 if __name__ == '__main__':
-    home_url = 'http://www.zxcs8.com/'
+    home_url = 'http://www.zxcs8.com/map.html'
     deal_url(home_url)
+    # info = dict()
+    # lines = open('zxcs_downloads.txt', mode='r', encoding="utf-8").readlines()
+    # for url in lines:
+    #     if url:
+    #         download_txt_real(url.strip(), info)
+    #         with open('zxcs_files.dat', mode='w', encoding="utf-8") as db:
+    #             db.write(json.dumps(info))
